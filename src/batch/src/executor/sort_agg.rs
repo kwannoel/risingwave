@@ -118,6 +118,7 @@ impl SortAggExecutor {
 
         #[for_await]
         for child_chunk in self.child.execute() {
+            println!("sortagg exec received: {:?}", child_chunk);
             let child_chunk = child_chunk?.compact();
             if no_input_data && child_chunk.cardinality() > 0 {
                 no_input_data = false;

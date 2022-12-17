@@ -558,6 +558,7 @@ impl<K: HashKey> HashJoinExecutor<K> {
 
         #[for_await]
         for probe_chunk in probe_side.execute() {
+            println!("Left semi received: {:?}", probe_chunk);
             let probe_chunk = probe_chunk?;
             let probe_keys = K::build(&probe_key_idxs, &probe_chunk)?;
             for (probe_row_id, probe_key) in probe_keys.iter().enumerate() {

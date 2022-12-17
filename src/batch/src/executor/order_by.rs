@@ -91,6 +91,7 @@ impl SortExecutor {
         }
 
         for chunk in &chunks {
+            println!("OrderBy (Sort) Received: {:?}", chunk);
             let encoded_chunk = encode_chunk(chunk, &self.order_pairs);
             encoded_rows.extend(
                 encoded_chunk

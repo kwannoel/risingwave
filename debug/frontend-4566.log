@@ -1,0 +1,1169 @@
+launching frontend node
+2022-12-16T15:28:23.421880Z  INFO risingwave_rt: parking lot deadlock detection enabled
+2022-12-16T15:28:23.423065Z  INFO risingwave_frontend::session: Starting frontend node with
+frontend config ServerConfig { heartbeat_interval_ms: 1000, max_heartbeat_interval_secs: 600, connection_pool_size: 16 }
+2022-12-16T15:28:23.423211Z  INFO risingwave_frontend::session: Client address is 127.0.0.1:4566
+2022-12-16T15:28:23.433342Z  INFO risingwave_frontend::session: Health Check RPC Listener is set up on 127.0.0.1:6786
+2022-12-16T15:28:23.433355Z  INFO risingwave_common_service::metrics_manager: Prometheus listener for Prometheus is set up on http://127.0.0.1:2222
+Left semi received: Ok(DataChunk { cardinality = 27, capacity = 27, data = 
++---+---+---+---+---------------------+
+| 1 | 1 | 1 | 1 | 2022-01-01 00:00:00 |
+| 3 | 1 | 2 | 3 | 2022-01-01 00:00:00 |
+| 3 | 1 | 2 | 3 | 2022-01-01 00:00:00 |
+| 4 | 1 | 2 | 4 | 2022-01-01 00:00:00 |
+| 4 | 1 | 2 | 4 | 2022-01-01 00:00:00 |
+| 6 | 2 | 1 | 1 | 2022-01-01 00:00:00 |
+| 6 | 2 | 1 | 1 | 2022-01-01 00:00:00 |
+| 7 | 2 | 2 | 3 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 9 | 2 | 2 | 5 | 2022-01-01 00:00:00 |
++---+---+---+---+---------------------+ })
+Left semi received: Ok(DataChunk { cardinality = 27, capacity = 27, data = 
++---+---+---+---+---------------------+
+| 1 | 1 | 1 | 1 | 2022-01-01 00:00:00 |
+| 3 | 1 | 1 | 3 | 2022-01-01 00:00:00 |
+| 3 | 1 | 2 | 3 | 2022-01-01 00:00:00 |
+| 4 | 1 | 2 | 4 | 2022-01-01 00:00:00 |
+| 5 | 1 | 2 | 5 | 2022-01-01 00:00:00 |
+| 6 | 2 | 1 | 1 | 2022-01-01 00:00:00 |
+| 6 | 2 | 1 | 1 | 2022-01-01 00:00:00 |
+| 7 | 2 | 2 | 3 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 9 | 2 | 2 | 5 | 2022-01-01 00:00:00 |
+| 9 | 2 | 2 | 5 | 2022-01-01 00:00:00 |
++---+---+---+---+---------------------+ })
+Left semi received: Ok(DataChunk { cardinality = 27, capacity = 27, data = 
++---+---+---+---+---------------------+
+| 1 | 1 | 1 | 1 | 2022-01-01 00:00:00 |
+| 1 | 1 | 1 | 1 | 2022-01-01 00:00:00 |
+| 3 | 1 | 2 | 3 | 2022-01-01 00:00:00 |
+| 4 | 1 | 2 | 4 | 2022-01-01 00:00:00 |
+| 5 | 1 | 2 | 5 | 2022-01-01 00:00:00 |
+| 5 | 1 | 2 | 5 | 2022-01-01 00:00:00 |
+| 6 | 2 | 1 | 1 | 2022-01-01 00:00:00 |
+| 7 | 2 | 2 | 3 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 9 | 2 | 2 | 5 | 2022-01-01 00:00:00 |
++---+---+---+---+---------------------+ })
+Left semi received: Ok(DataChunk { cardinality = 27, capacity = 27, data = 
++---+---+---+---+---------------------+
+| 1 | 1 | 1 | 1 | 2022-01-01 00:00:00 |
+| 3 | 1 | 1 | 3 | 2022-01-01 00:00:00 |
+| 4 | 1 | 2 | 4 | 2022-01-01 00:00:00 |
+| 4 | 1 | 2 | 4 | 2022-01-01 00:00:00 |
+| 5 | 1 | 2 | 5 | 2022-01-01 00:00:00 |
+| 5 | 1 | 2 | 5 | 2022-01-01 00:00:00 |
+| 7 | 2 | 1 | 3 | 2022-01-01 00:00:00 |
+| 7 | 2 | 1 | 3 | 2022-01-01 00:00:00 |
+| 7 | 2 | 2 | 3 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 9 | 2 | 2 | 5 | 2022-01-01 00:00:00 |
++---+---+---+---+---------------------+ })
+OrderBy (Sort) Received: DataChunk { cardinality = 114, capacity = 114, data = 
++---+
+| 1 |
+| 3 |
+| 3 |
+| 4 |
+| 4 |
+| 6 |
+| 6 |
+| 7 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 9 |
+| 1 |
+| 3 |
+| 3 |
+| 4 |
+| 5 |
+| 6 |
+| 6 |
+| 7 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 9 |
+| 9 |
+| 1 |
+| 1 |
+| 3 |
+| 4 |
+| 5 |
+| 5 |
+| 6 |
+| 7 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 9 |
+| 1 |
+| 1 |
+| 3 |
+| 4 |
+| 4 |
+| 5 |
+| 5 |
+| 7 |
+| 7 |
+| 7 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 9 |
++---+ }
+sortagg exec received: Ok(DataChunk { cardinality = 114, capacity = 114, data = 
++---+
+| 1 |
+| 1 |
+| 1 |
+| 1 |
+| 1 |
+| 1 |
+| 3 |
+| 3 |
+| 3 |
+| 3 |
+| 3 |
+| 3 |
+| 4 |
+| 4 |
+| 4 |
+| 4 |
+| 4 |
+| 4 |
+| 5 |
+| 5 |
+| 5 |
+| 5 |
+| 5 |
+| 6 |
+| 6 |
+| 6 |
+| 6 |
+| 6 |
+| 7 |
+| 7 |
+| 7 |
+| 7 |
+| 7 |
+| 7 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 9 |
+| 9 |
+| 9 |
+| 9 |
+| 9 |
++---+ })
+Left semi received: Ok(DataChunk { cardinality = 27, capacity = 27, data = 
++---+---+---+---+---------------------+
+| 1 | 1 | 1 | 1 | 2022-01-01 00:00:00 |
+| 1 | 1 | 1 | 1 | 2022-01-01 00:00:00 |
+| 3 | 1 | 2 | 3 | 2022-01-01 00:00:00 |
+| 4 | 1 | 2 | 4 | 2022-01-01 00:00:00 |
+| 5 | 1 | 2 | 5 | 2022-01-01 00:00:00 |
+| 5 | 1 | 2 | 5 | 2022-01-01 00:00:00 |
+| 6 | 2 | 1 | 1 | 2022-01-01 00:00:00 |
+| 7 | 2 | 2 | 3 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 9 | 2 | 2 | 5 | 2022-01-01 00:00:00 |
++---+---+---+---+---------------------+ })
+Left semi received: Ok(DataChunk { cardinality = 27, capacity = 27, data = 
++---+---+---+---+---------------------+
+| 1 | 1 | 1 | 1 | 2022-01-01 00:00:00 |
+| 3 | 1 | 2 | 3 | 2022-01-01 00:00:00 |
+| 3 | 1 | 2 | 3 | 2022-01-01 00:00:00 |
+| 4 | 1 | 2 | 4 | 2022-01-01 00:00:00 |
+| 4 | 1 | 2 | 4 | 2022-01-01 00:00:00 |
+| 6 | 2 | 1 | 1 | 2022-01-01 00:00:00 |
+| 6 | 2 | 1 | 1 | 2022-01-01 00:00:00 |
+| 7 | 2 | 2 | 3 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 9 | 2 | 2 | 5 | 2022-01-01 00:00:00 |
++---+---+---+---+---------------------+ })
+Left semi received: Ok(DataChunk { cardinality = 27, capacity = 27, data = 
++---+---+---+---+---------------------+
+| 1 | 1 | 1 | 1 | 2022-01-01 00:00:00 |
+| 3 | 1 | 1 | 3 | 2022-01-01 00:00:00 |
+| 3 | 1 | 2 | 3 | 2022-01-01 00:00:00 |
+| 4 | 1 | 2 | 4 | 2022-01-01 00:00:00 |
+| 5 | 1 | 2 | 5 | 2022-01-01 00:00:00 |
+| 6 | 2 | 1 | 1 | 2022-01-01 00:00:00 |
+| 6 | 2 | 1 | 1 | 2022-01-01 00:00:00 |
+| 7 | 2 | 2 | 3 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 9 | 2 | 2 | 5 | 2022-01-01 00:00:00 |
+| 9 | 2 | 2 | 5 | 2022-01-01 00:00:00 |
++---+---+---+---+---------------------+ })
+Left semi received: Ok(DataChunk { cardinality = 27, capacity = 27, data = 
++---+---+---+---+---------------------+
+| 1 | 1 | 1 | 1 | 2022-01-01 00:00:00 |
+| 3 | 1 | 1 | 3 | 2022-01-01 00:00:00 |
+| 4 | 1 | 2 | 4 | 2022-01-01 00:00:00 |
+| 4 | 1 | 2 | 4 | 2022-01-01 00:00:00 |
+| 5 | 1 | 2 | 5 | 2022-01-01 00:00:00 |
+| 5 | 1 | 2 | 5 | 2022-01-01 00:00:00 |
+| 7 | 2 | 1 | 3 | 2022-01-01 00:00:00 |
+| 7 | 2 | 1 | 3 | 2022-01-01 00:00:00 |
+| 7 | 2 | 2 | 3 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 9 | 2 | 2 | 5 | 2022-01-01 00:00:00 |
++---+---+---+---+---------------------+ })
+OrderBy (Sort) Received: DataChunk { cardinality = 114, capacity = 114, data = 
++---+
+| 1 |
+| 1 |
+| 3 |
+| 4 |
+| 5 |
+| 5 |
+| 6 |
+| 7 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 9 |
+| 1 |
+| 3 |
+| 3 |
+| 4 |
+| 4 |
+| 6 |
+| 6 |
+| 7 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 9 |
+| 1 |
+| 3 |
+| 3 |
+| 4 |
+| 5 |
+| 6 |
+| 6 |
+| 7 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 9 |
+| 9 |
+| 1 |
+| 1 |
+| 3 |
+| 4 |
+| 4 |
+| 5 |
+| 5 |
+| 7 |
+| 7 |
+| 7 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 9 |
++---+ }
+sortagg exec received: Ok(DataChunk { cardinality = 114, capacity = 114, data = 
++---+
+| 1 |
+| 1 |
+| 1 |
+| 1 |
+| 1 |
+| 1 |
+| 3 |
+| 3 |
+| 3 |
+| 3 |
+| 3 |
+| 3 |
+| 4 |
+| 4 |
+| 4 |
+| 4 |
+| 4 |
+| 4 |
+| 5 |
+| 5 |
+| 5 |
+| 5 |
+| 5 |
+| 6 |
+| 6 |
+| 6 |
+| 6 |
+| 6 |
+| 7 |
+| 7 |
+| 7 |
+| 7 |
+| 7 |
+| 7 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 9 |
+| 9 |
+| 9 |
+| 9 |
+| 9 |
++---+ })
+2022-12-16T15:28:33.429450Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536932329750528 with RPC
+2022-12-16T15:28:53.428339Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536933704761344 with RPC
+2022-12-16T15:29:03.428847Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536934425657344 with RPC
+2022-12-16T15:29:23.430761Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536935867383808 with RPC
+2022-12-16T15:29:43.427012Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536937309110272 with RPC
+2022-12-16T15:30:03.426811Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536938750902272 with RPC
+2022-12-16T15:30:23.675610Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536939471798272 with RPC
+Left semi received: Ok(DataChunk { cardinality = 27, capacity = 27, data = 
++---+---+---+---+---------------------+
+| 1 | 1 | 1 | 1 | 2022-01-01 00:00:00 |
+| 3 | 1 | 1 | 3 | 2022-01-01 00:00:00 |
+| 4 | 1 | 2 | 4 | 2022-01-01 00:00:00 |
+| 4 | 1 | 2 | 4 | 2022-01-01 00:00:00 |
+| 5 | 1 | 2 | 5 | 2022-01-01 00:00:00 |
+| 5 | 1 | 2 | 5 | 2022-01-01 00:00:00 |
+| 7 | 2 | 1 | 3 | 2022-01-01 00:00:00 |
+| 7 | 2 | 1 | 3 | 2022-01-01 00:00:00 |
+| 7 | 2 | 2 | 3 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 9 | 2 | 2 | 5 | 2022-01-01 00:00:00 |
++---+---+---+---+---------------------+ })
+Left semi received: Ok(DataChunk { cardinality = 27, capacity = 27, data = 
++---+---+---+---+---------------------+
+| 1 | 1 | 1 | 1 | 2022-01-01 00:00:00 |
+| 1 | 1 | 1 | 1 | 2022-01-01 00:00:00 |
+| 3 | 1 | 2 | 3 | 2022-01-01 00:00:00 |
+| 4 | 1 | 2 | 4 | 2022-01-01 00:00:00 |
+| 5 | 1 | 2 | 5 | 2022-01-01 00:00:00 |
+| 5 | 1 | 2 | 5 | 2022-01-01 00:00:00 |
+| 6 | 2 | 1 | 1 | 2022-01-01 00:00:00 |
+| 7 | 2 | 2 | 3 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 9 | 2 | 2 | 5 | 2022-01-01 00:00:00 |
++---+---+---+---+---------------------+ })
+Left semi received: Ok(DataChunk { cardinality = 27, capacity = 27, data = 
++---+---+---+---+---------------------+
+| 1 | 1 | 1 | 1 | 2022-01-01 00:00:00 |
+| 3 | 1 | 1 | 3 | 2022-01-01 00:00:00 |
+| 3 | 1 | 2 | 3 | 2022-01-01 00:00:00 |
+| 4 | 1 | 2 | 4 | 2022-01-01 00:00:00 |
+| 5 | 1 | 2 | 5 | 2022-01-01 00:00:00 |
+| 6 | 2 | 1 | 1 | 2022-01-01 00:00:00 |
+| 6 | 2 | 1 | 1 | 2022-01-01 00:00:00 |
+| 7 | 2 | 2 | 3 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 9 | 2 | 2 | 5 | 2022-01-01 00:00:00 |
+| 9 | 2 | 2 | 5 | 2022-01-01 00:00:00 |
++---+---+---+---+---------------------+ })
+Left semi received: Ok(DataChunk { cardinality = 27, capacity = 27, data = 
++---+---+---+---+---------------------+
+| 1 | 1 | 1 | 1 | 2022-01-01 00:00:00 |
+| 3 | 1 | 2 | 3 | 2022-01-01 00:00:00 |
+| 3 | 1 | 2 | 3 | 2022-01-01 00:00:00 |
+| 4 | 1 | 2 | 4 | 2022-01-01 00:00:00 |
+| 4 | 1 | 2 | 4 | 2022-01-01 00:00:00 |
+| 6 | 2 | 1 | 1 | 2022-01-01 00:00:00 |
+| 6 | 2 | 1 | 1 | 2022-01-01 00:00:00 |
+| 7 | 2 | 2 | 3 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 8 | 2 | 2 | 4 | 2022-01-01 00:00:00 |
+| 9 | 2 | 2 | 5 | 2022-01-01 00:00:00 |
++---+---+---+---+---------------------+ })
+OrderBy (Sort) Received: DataChunk { cardinality = 114, capacity = 114, data = 
++---+
+| 1 |
+| 3 |
+| 4 |
+| 4 |
+| 5 |
+| 5 |
+| 7 |
+| 7 |
+| 7 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 9 |
+| 1 |
+| 1 |
+| 3 |
+| 4 |
+| 5 |
+| 5 |
+| 6 |
+| 7 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 9 |
+| 1 |
+| 3 |
+| 3 |
+| 4 |
+| 5 |
+| 6 |
+| 6 |
+| 7 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 9 |
+| 9 |
+| 1 |
+| 3 |
+| 3 |
+| 4 |
+| 4 |
+| 6 |
+| 6 |
+| 7 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 9 |
++---+ }
+sortagg exec received: Ok(DataChunk { cardinality = 114, capacity = 114, data = 
++---+
+| 1 |
+| 1 |
+| 1 |
+| 1 |
+| 1 |
+| 3 |
+| 3 |
+| 3 |
+| 3 |
+| 3 |
+| 3 |
+| 4 |
+| 4 |
+| 4 |
+| 4 |
+| 4 |
+| 4 |
+| 5 |
+| 5 |
+| 5 |
+| 5 |
+| 5 |
+| 6 |
+| 6 |
+| 6 |
+| 6 |
+| 6 |
+| 7 |
+| 7 |
+| 7 |
+| 7 |
+| 7 |
+| 7 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 8 |
+| 9 |
+| 9 |
+| 9 |
+| 9 |
+| 9 |
++---+ })
+2022-12-16T15:30:43.427814Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536940913524736 with RPC
+2022-12-16T15:31:03.428913Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536942355316736 with RPC
+2022-12-16T15:31:23.428658Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536943797108736 with RPC
+2022-12-16T15:31:43.424961Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536945238835200 with RPC
+2022-12-16T15:31:53.426001Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536945959731200 with RPC
+2022-12-16T15:32:13.424223Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536946680561664 with RPC
+2022-12-16T15:32:33.423249Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536948122288128 with RPC
+2022-12-16T15:32:43.423243Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536948843249664 with RPC
+2022-12-16T15:32:53.423534Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536949564145664 with RPC
+2022-12-16T15:33:03.424259Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536950285041664 with RPC
+2022-12-16T15:33:23.422555Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536951726833664 with RPC
+2022-12-16T15:33:33.422601Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536952447598592 with RPC
+2022-12-16T15:33:53.361675Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536953168494592 with RPC
+2022-12-16T15:34:13.360597Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536954606354432 with RPC
+2022-12-16T15:34:23.361490Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536955327184896 with RPC
+2022-12-16T15:34:43.359663Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536956768911360 with RPC
+2022-12-16T15:35:03.358801Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536958210572288 with RPC
+2022-12-16T15:35:13.358572Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536958931599360 with RPC
+2022-12-16T15:35:23.358721Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536959652364288 with RPC
+2022-12-16T15:35:43.357126Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536960373260288 with RPC
+2022-12-16T15:35:53.357272Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536961094156288 with RPC
+2022-12-16T15:36:13.356810Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536962535882752 with RPC
+2022-12-16T15:36:33.356116Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536963977543680 with RPC
+2022-12-16T15:36:53.354785Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536965419335680 with RPC
+2022-12-16T15:37:03.354752Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536966140297216 with RPC
+2022-12-16T15:37:23.353931Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536967582023680 with RPC
+2022-12-16T15:37:43.353253Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536968302854144 with RPC
+2022-12-16T15:38:03.353864Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536969744580608 with RPC
+2022-12-16T15:38:23.351519Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536971186372608 with RPC
+2022-12-16T15:38:33.353113Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536971907268608 with RPC
+2022-12-16T15:38:53.352251Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536973349060608 with RPC
+2022-12-16T15:39:13.350894Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536974790787072 with RPC
+2022-12-16T15:39:43.348816Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536976232513536 with RPC
+2022-12-16T15:39:53.349351Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536976953409536 with RPC
+2022-12-16T15:40:13.349503Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536978395136000 with RPC
+2022-12-16T15:40:33.348479Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536979836862464 with RPC
+2022-12-16T15:40:43.348300Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536980557692928 with RPC
+2022-12-16T15:41:03.346160Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536981999419392 with RPC
+2022-12-16T15:41:33.346350Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536983441145856 with RPC
+2022-12-16T15:41:53.345795Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536984883003392 with RPC
+2022-12-16T15:42:13.345461Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536986324664320 with RPC
+2022-12-16T15:42:33.343891Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536987766325248 with RPC
+2022-12-16T15:42:43.344271Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536988487286784 with RPC
+2022-12-16T15:43:03.341780Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536989208117248 with RPC
+2022-12-16T15:43:13.342246Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536989928947712 with RPC
+2022-12-16T15:43:53.893786Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536992717635584 with RPC
+2022-12-16T15:44:03.892296Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536993438400512 with RPC
+2022-12-16T15:44:23.890202Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536994880061440 with RPC
+2022-12-16T15:44:33.891017Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536995600957440 with RPC
+2022-12-16T15:44:53.888646Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536997042683904 with RPC
+2022-12-16T15:45:03.888528Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536997763579904 with RPC
+2022-12-16T15:45:33.887164Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536999205371904 with RPC
+2022-12-16T15:45:43.887929Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3536999926136832 with RPC
+2022-12-16T15:46:03.886744Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3537001367928832 with RPC
+2022-12-16T15:46:23.886023Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3537002809655296 with RPC
+2022-12-16T15:46:43.884875Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3537004251447296 with RPC
+2022-12-16T15:47:03.884202Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3537004972277760 with RPC
+2022-12-16T15:47:23.883444Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3537006414004224 with RPC
+2022-12-16T15:47:33.885999Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3537007134900224 with RPC
+2022-12-16T15:47:53.882357Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3537008576692224 with RPC
+2022-12-16T15:48:13.881570Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3537010018418688 with RPC
+2022-12-16T15:48:23.881354Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3537010739249152 with RPC
+2022-12-16T15:48:33.881547Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3537011460014080 with RPC
+2022-12-16T15:48:53.880682Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3537012180975616 with RPC
+2022-12-16T15:49:13.880118Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3537013622767616 with RPC
+2022-12-16T15:49:23.879945Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3537014343598080 with RPC
+2022-12-16T15:49:43.878278Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3537015785390080 with RPC
+2022-12-16T15:49:53.878526Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3537016506220544 with RPC
+2022-12-16T15:50:13.877283Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3537017948012544 with RPC
+2022-12-16T15:50:23.878390Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3537018668908544 with RPC
+2022-12-16T15:50:43.876214Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3537019389804544 with RPC
+2022-12-16T15:50:53.876908Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3537020110569472 with RPC
+2022-12-16T15:51:03.876706Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3537020831399936 with RPC
+2022-12-16T15:51:23.874858Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3537022273257472 with RPC
+2022-12-16T15:51:33.875553Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3537022993956864 with RPC
+2022-12-16T15:51:43.875825Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3537023714983936 with RPC
+2022-12-16T15:51:53.875585Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3537024435879936 with RPC
+2022-12-16T15:52:13.874155Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3537025877606400 with RPC
+2022-12-16T15:52:23.874184Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3537026598436864 with RPC
+2022-12-16T15:52:53.873451Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3537028040163328 with RPC
+2022-12-16T15:53:13.872787Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3537029481955328 with RPC
+2022-12-16T15:53:33.871467Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3537030923681792 with RPC
+2022-12-16T15:53:43.871813Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3537031644512256 with RPC
+2022-12-16T15:54:03.869122Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3537033086173184 with RPC
+2022-12-16T15:54:13.870674Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3537033807134720 with RPC
+2022-12-16T15:54:33.869156Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3537034527899648 with RPC
+2022-12-16T15:54:53.868567Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3537035969822720 with RPC
+2022-12-16T15:55:03.868960Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3537036690653184 with RPC
+2022-12-16T15:55:23.866903Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3537038132379648 with RPC
+2022-12-16T15:55:33.939105Z  INFO risingwave_frontend::scheduler::hummock_snapshot_manager: Unpin epoch 3537038857928704 with RPC
+2022-12-16T16:11:17.212551Z ERROR risingwave_common_service::observer_manager: Stream of notification terminated.
+2022-12-16T16:11:18.359415Z ERROR risingwave_rpc_client::meta_client: worker expired: Invalid worker: 2
+Fri Dec 16 16:11:18 UTC 2022 [risedev]: Program exited with 1
